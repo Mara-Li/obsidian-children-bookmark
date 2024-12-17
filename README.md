@@ -16,10 +16,10 @@ Bookmarks api is a mess to deal with, so feel free to improve!
 ## 📥 Installation
 
 - [ ] From Obsidian's community plugins
-- [x] Using BRAT with `https://github.com/Mara-Li/`
+- [x] Using BRAT with `https://github.com/Mara-Li/obsidian-children-bookmark`
 - [x] From the release page: 
     - Download the latest release
-    - Unzip `sync-bookmark.zip` in `.obsidian/plugins/` path
+    - Unzip `bookmarks-children.zip` in `.obsidian/plugins/` path
     - In Obsidian settings, reload the plugin
     - Enable the plugin
 
