@@ -1,1 +1,13 @@
-{}
+{
+  "error": {
+    "bookmarkPluginNotEnabled": "This plugin can't work without bookmarks!"
+  },
+  "menu": {
+    "add": "Add to bookmarks"
+  },
+  "settings": {
+    "add": "Add new folder",
+    "folder": "Folder",
+    "remove": "Delete folder"
+  }
+}

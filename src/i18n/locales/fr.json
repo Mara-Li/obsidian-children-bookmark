@@ -1,0 +1,13 @@
+{
+	"error": {
+		"bookmarkPluginNotEnabled": "Ce module ne peut pas fonctionner sans le plugin des signets !"
+	},
+	"menu": {
+		"add": ""
+	},
+	"settings": {
+		"add": "Ajouter un nouveau dossier",
+		"folder": "Dossier",
+		"remove": "Delete folder"
+	}
+}
