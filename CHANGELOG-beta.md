@@ -1,3 +1,8 @@
+## [0.0.1-1](https://github.com/Mara-Li/obsidian-sync-bookmark/compare/0.0.1-0...0.0.1-1) (2024-12-17)
+### Bug Fixes
+
+* delete unused styles ([3142634](https://github.com/Mara-Li/obsidian-sync-bookmark/commit/3142634da9eba28218431fba37dc24f4ae061be9))
+
 ## 0.0.1-0 (2024-12-17)
 ### Features
 
