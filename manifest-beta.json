@@ -1,6 +1,6 @@
 {
-	"id": "sync-bookmark",
-	"name": "Sync Bookmark",
+	"id": "bookmarks-children",
+	"name": "Bookmarks Children",
 	"version": "0.0.1-1",
 	"minAppVersion": "1.5.12",
 	"description": "Allow to add folder tree in bookmark and keep it synced with explorer.",

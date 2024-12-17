@@ -1,5 +1,5 @@
 {
-	"name": "sync-bookmark",
+	"name": "children-bookmark",
 	"version": "0.0.1-1",
 	"description": "Allow to add folder tree in bookmark and keep it synced with explorer.",
 	"main": "main.js",
@@ -42,9 +42,5 @@
 		"dotenv": "^16.4.5",
 		"obsidian-typings": "^2.6.0"
 	},
-	"trustedDependencies": [
-		"@biomejs/biome",
-		"electron",
-		"esbuild"
-	]
+	"trustedDependencies": ["@biomejs/biome", "electron", "esbuild"]
 }

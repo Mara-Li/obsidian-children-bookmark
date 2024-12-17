@@ -25,7 +25,7 @@ jobs:
         uses: mara-li/reusable-workflows/.github/workflows/obsidian-plugin-release.yaml@main
 
         with:
-            PLUGIN_NAME: sync-bookmark
+            PLUGIN_NAME: bookmarks-children
             CACHE: "bun"
         secrets:
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
