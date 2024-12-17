@@ -2,11 +2,9 @@ import i18next from "i18next";
 import { Notice, Plugin, TFolder } from "obsidian";
 import type { BookmarksPluginInstance } from "obsidian-typings";
 import { resources, translationLanguage } from "./i18n";
-import { DEFAULT_SETTINGS, type SyncBookmarkSettings } from "./interfaces";
 import { createFromPaths } from "./utils";
 
 export default class SyncBookmark extends Plugin {
-	settings!: SyncBookmarkSettings;
 	bookmarkInstance: BookmarksPluginInstance | undefined = undefined;
 
 	getItems(folder: TFolder) {
@@ -18,7 +16,6 @@ export default class SyncBookmark extends Plugin {
 				filePaths.push(file.path);
 			}
 		}
-		console.log(filePaths);
 		return filePaths;
 	}
 
@@ -40,7 +37,6 @@ export default class SyncBookmark extends Plugin {
 
 	async onload() {
 		console.log(`[${this.manifest.name}] Loaded`);
-		await this.loadSettings();
 		//load i18next
 		await i18next.init({
 			lng: translationLanguage,
@@ -59,10 +55,9 @@ export default class SyncBookmark extends Plugin {
 				if (file instanceof TFolder) {
 					menu.addItem((item) => {
 						item
-							.setTitle(i18next.t("menu.add"))
+							.setTitle(i18next.t("add", { folder: TFolder.name }))
 							.setIcon("bookmark")
 							.onClick(() => {
-								console.log("Add bookmark");
 								this.createBookMarks(file);
 							});
 					});
@@ -73,13 +68,5 @@ export default class SyncBookmark extends Plugin {
 
 	onunload() {
 		console.log(`[${this.manifest.name}] Unloaded`);
-	}
-
-	async loadSettings() {
-		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
-	}
-
-	async saveSettings() {
-		await this.saveData(this.settings);
 	}
 }
