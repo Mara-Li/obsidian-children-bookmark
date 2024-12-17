@@ -10,7 +10,7 @@ export default class SyncBookmark extends Plugin {
 	settings!: SyncBookmarkSettings;
 
 	async onload() {
-		console.log(`[${this.manifest.name}] Loaded`)
+		console.log(`[${this.manifest.name}] Loaded`);
 		await this.loadSettings();
 		//load i18next
 		await i18next.init({
@@ -21,10 +21,14 @@ export default class SyncBookmark extends Plugin {
 			returnEmptyString: false,
 		});
 		// This creates an icon in the left ribbon.
-		const ribbonIconEl = this.addRibbonIcon("dice", "Sample Plugin", (_evt: MouseEvent) => {
-			// Called when the user clicks the icon.
-			new Notice("This is a notice!");
-		});
+		const ribbonIconEl = this.addRibbonIcon(
+			"dice",
+			"Sample Plugin",
+			(_evt: MouseEvent) => {
+				// Called when the user clicks the icon.
+				new Notice("This is a notice!");
+			}
+		);
 		// Perform additional things with the ribbon
 		ribbonIconEl.addClass("my-plugin-ribbon-class");
 
@@ -38,16 +42,16 @@ export default class SyncBookmark extends Plugin {
 			name: "Open sample modal (simple)",
 			callback: () => {
 				new SyncBookmarkModal(this.app).open();
-			}
+			},
 		});
 		// This adds an editor command that can perform some operation on the current editor instance
 		this.addCommand({
 			id: "sample-editor-command",
 			name: "Sample editor command",
-			editorCallback: (editor: Editor, _view: MarkdownView|MarkdownFileInfo) => {
+			editorCallback: (editor: Editor, _view: MarkdownView | MarkdownFileInfo) => {
 				console.log(editor.getSelection());
 				editor.replaceSelection("Sample Editor Command");
-			}
+			},
 		});
 		// This adds a complex command that can check whether the current state of the app allows execution of the command
 		this.addCommand({
@@ -66,7 +70,7 @@ export default class SyncBookmark extends Plugin {
 					// This command will only show up in Command Palette when the check function returns true
 					return true;
 				}
-			}
+			},
 		});
 
 		// This adds a settings tab so the user can configure various aspects of the plugin
@@ -79,7 +83,9 @@ export default class SyncBookmark extends Plugin {
 		});
 
 		// When registering intervals, this function will automatically clear the interval when the plugin is disabled.
-		this.registerInterval(window.setInterval(() => console.log("setInterval"), 5 * 60 * 1000));
+		this.registerInterval(
+			window.setInterval(() => console.log("setInterval"), 5 * 60 * 1000)
+		);
 	}
 
 	onunload() {
@@ -94,5 +100,3 @@ export default class SyncBookmark extends Plugin {
 		await this.saveData(this.settings);
 	}
 }
-
-
