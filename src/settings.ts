@@ -1,10 +1,10 @@
 import { type App, PluginSettingTab, Setting } from "obsidian";
-import <%= data.interfaceName %> from "./main";
+import SyncBookmark from "./main";
 
-export class <%= data.interfaceName %>SettingTab extends PluginSettingTab {
-	plugin: <%= data.interfaceName %>;
+export class SyncBookmarkSettingTab extends PluginSettingTab {
+	plugin: SyncBookmark;
 
-	constructor(app: App, plugin: <%= data.interfaceName %>) {
+	constructor(app: App, plugin: SyncBookmark) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}
