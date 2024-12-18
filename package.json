@@ -1,6 +1,6 @@
 {
 	"name": "children-bookmark",
-	"version": "0.0.1-4",
+	"version": "0.0.1-5",
 	"description": "Allow to add folder tree in bookmark and keep it synced with explorer.",
 	"main": "main.js",
 	"private": true,

@@ -1,3 +1,8 @@
+## [0.0.1-5](https://github.com/Mara-Li/obsidian-sync-bookmark/compare/0.0.1-4...0.0.1-5) (2024-12-18)
+### Bug Fixes
+
+* **utils:** correct logic in bookmark exclusion condition ([806463b](https://github.com/Mara-Li/obsidian-sync-bookmark/commit/806463bdced703694a2adf078aaf4ec9392ea14f))
+
 ## [0.0.1-4](https://github.com/Mara-Li/obsidian-sync-bookmark/compare/0.0.1-3...0.0.1-4) (2024-12-18)
 ### Bug Fixes
 
