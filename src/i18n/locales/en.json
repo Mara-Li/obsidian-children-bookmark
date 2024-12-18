@@ -2,5 +2,5 @@
 	"error": {
 		"bookmarkPluginNotEnabled": "This plugin can't work without bookmarks!"
 	},
-	"add": "Bookmark {{- folder}} and its children"
+	"add": "Bookmarks {{- folder}} children"
 }
