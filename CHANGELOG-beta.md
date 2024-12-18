@@ -1,3 +1,8 @@
+## [0.0.1-4](https://github.com/Mara-Li/obsidian-sync-bookmark/compare/0.0.1-3...0.0.1-4) (2024-12-18)
+### Bug Fixes
+
+* **settings:** adjust bookmark property handling and update translations ([d94501d](https://github.com/Mara-Li/obsidian-sync-bookmark/commit/d94501d9a5ae9ee0eb7207233d8362dbafd33871))
+
 ## [0.0.1-3](https://github.com/Mara-Li/obsidian-sync-bookmark/compare/0.0.1-2...0.0.1-3) (2024-12-18)
 ### Bug Fixes
 
