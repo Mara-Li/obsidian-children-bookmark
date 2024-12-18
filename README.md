@@ -13,6 +13,9 @@ Also, the order of the structure don't be saved if you readd the same folder.
 
 Bookmarks api is a mess to deal with, so feel free to improve!
 
+### 📝 Usage
+Right click in a folder in the file explorer, and click on `Bookmark children`.
+
 ## 📥 Installation
 
 - [ ] From Obsidian's community plugins
