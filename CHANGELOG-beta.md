@@ -1,3 +1,8 @@
+## [0.0.1-2](https://github.com/Mara-Li/obsidian-sync-bookmark/compare/0.0.1-1...0.0.1-2) (2024-12-18)
+### Features
+
+* **settings:** implement bookmark inclusion/exclusion rules ([f29cb25](https://github.com/Mara-Li/obsidian-sync-bookmark/commit/f29cb259badd3f155fffed9ca445e9300e12632b))
+
 ## [0.0.1-1](https://github.com/Mara-Li/obsidian-sync-bookmark/compare/0.0.1-0...0.0.1-1) (2024-12-17)
 ### Bug Fixes
 
