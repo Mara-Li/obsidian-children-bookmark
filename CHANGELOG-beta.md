@@ -1,3 +1,8 @@
+## [0.0.1-3](https://github.com/Mara-Li/obsidian-sync-bookmark/compare/0.0.1-2...0.0.1-3) (2024-12-18)
+### Bug Fixes
+
+* **main:** typo in i18next that brokes name generation ([0b7ebcb](https://github.com/Mara-Li/obsidian-sync-bookmark/commit/0b7ebcb743f48805795483475b72012e20aea5fa))
+
 ## [0.0.1-2](https://github.com/Mara-Li/obsidian-sync-bookmark/compare/0.0.1-1...0.0.1-2) (2024-12-18)
 ### Features
 
