@@ -26,7 +26,7 @@ export class BookmarksChildrenSettingsTab extends PluginSettingTab {
 		
 		<p>${i18next.t("settings.property", { property: "children_bookmarks" })}
 			<li> ${i18next.t("settings.property_include")} <u><code><bold>true</bold></code></u></li>
-			<li>${i18next.t("settings.property_exclude")} <u><code><bold>false</bold></code></u> ${i18next.t("settings.property_undef")}</li>
+			<li>${i18next.t("settings.property_exclude")} <u><code><bold>false</bold></code></u></li>
 		</p>
 		`);
 

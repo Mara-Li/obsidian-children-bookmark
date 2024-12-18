@@ -14,7 +14,7 @@
     },
     "newRules": "Add new rules",
     "property": "It is also possible to use a <code>{{-property}}</code> in the frontmatter. This Boolean property can be used to define:",
-    "property_exclude": "Exclusion if defined on",
+    "property_exclude": "Exclusion if defined <u>strictly</u> on",
     "property_include": "Inclusion if defined on",
     "property_undef": "or if not defined.",
     "regex": "Regular expressions are supported.",

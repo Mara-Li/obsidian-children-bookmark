@@ -1,27 +1,27 @@
 {
-	"add": "Ajouter {{- folder}} et ses enfants aux signets",
-	"error": {
-		"bookmarkPluginNotEnabled": "Ce module ne peut pas fonctionner sans le plugin des signets !"
-	},
-	"settings": {
-		"allow": "Le plugin permet aussi d'exclure ou inclure selon des règles. Ainsi, tous les fichiers qui respectent ses règles de chemins seront inclus ou exclus lors de leur ajout aux signets.",
-		"delete": "Supprimer la règle",
-		"exclude": "Exclure seulement si ...",
-		"include": "Inclure seulement si ...",
-		"mode": {
-			"desc": "Inclure ou exclure selon les règles suivantes",
-			"name": "Mode d'inclusion"
-		},
-		"newRules": "Ajouter une nouvelle règle",
-		"property": "Il est aussi possible d'utiliser une propriété <code>{{-property}}</code> dans le frontmatter. Cette propriété, booléenne, permet de définir :",
-		"property_exclude": "L'exclusion si elle est définie sur",
-		"property_include": "L'inclusion si elle est définie sur",
-		"property_undef": "ou si elle n'est pas définie.",
-		"regex": "Les expressions régulières sont supportées.",
-		"root": {
-			"desc": "Permet de définir la racine des bookmarks créés.",
-			"name": "Racine"
-		},
-		"strictness": "Par défaut, les règles sont peu strictes : si le chemin contient le texte, alors le fichier sera inclus ou exclu."
-	}
+  "add": "Ajouter {{- folder}} et ses enfants aux signets",
+  "error": {
+    "bookmarkPluginNotEnabled": "Ce module ne peut pas fonctionner sans le plugin des signets !"
+  },
+  "settings": {
+    "allow": "Le plugin permet aussi d'exclure ou inclure selon des règles. Ainsi, tous les fichiers qui respectent ses règles de chemins seront inclus ou exclus lors de leur ajout aux signets.",
+    "delete": "Supprimer la règle",
+    "exclude": "Exclure seulement si ...",
+    "include": "Inclure seulement si ...",
+    "mode": {
+      "desc": "Inclure ou exclure selon les règles suivantes",
+      "name": "Mode d'inclusion"
+    },
+    "newRules": "Ajouter une nouvelle règle",
+    "property": "Il est aussi possible d'utiliser une propriété <code>{{-property}}</code> dans le frontmatter. Cette propriété, booléenne, permet de définir :",
+    "property_exclude": "L'exclusion si elle est définie <u>strictement</u> sur",
+    "property_include": "L'inclusion si elle est définie sur",
+    "property_undef": "ou si elle n'est pas définie.",
+    "regex": "Les expressions régulières sont supportées.",
+    "root": {
+      "desc": "Permet de définir la racine des bookmarks créés.",
+      "name": "Racine"
+    },
+    "strictness": "Par défaut, les règles sont peu strictes : si le chemin contient le texte, alors le fichier sera inclus ou exclu."
+  }
 }

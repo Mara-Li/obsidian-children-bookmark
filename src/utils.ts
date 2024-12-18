@@ -92,9 +92,8 @@ export function createFromPaths(
 				//read frontmatter and search for "children_bookmarks" property
 				res = addOrUpdateBookmark(res, file, root);
 			} else if (
-				mode === "exclude" &&
-				!testPaths(settings.rules, file) &&
-				!frontmatter?.children_bookmarks
+				(mode === "exclude" && !testPaths(settings.rules, file)) ||
+				frontmatter?.children_bookmarks !== false
 			) {
 				res = addOrUpdateBookmark(res, file, root);
 			}
