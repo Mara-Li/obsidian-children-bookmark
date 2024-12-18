@@ -61,7 +61,7 @@ export default class BookmarksChildren extends Plugin {
 				if (file instanceof TFolder) {
 					menu.addItem((item) => {
 						item
-							.setTitle(i18next.t("add", { folder: TFolder.name }))
+							.setTitle(i18next.t("add", { folder: file.name }))
 							.setIcon("bookmark")
 							.onClick(() => {
 								this.createBookMarks(file);
