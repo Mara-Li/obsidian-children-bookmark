@@ -9,3 +9,13 @@ export interface ExtendedBookmarkItem
 	path?: string;
 	items?: ExtendedBookmarkItem[]; // Support récursif
 }
+
+export interface BookmarksChildrenSettings {
+	mode: "include" | "exclude";
+	rules: string[];
+}
+
+export const DEFAULT_SETTINGS: BookmarksChildrenSettings = {
+	mode: "exclude",
+	rules: [],
+};

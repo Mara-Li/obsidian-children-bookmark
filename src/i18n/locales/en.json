@@ -1,6 +1,27 @@
 {
-	"error": {
-		"bookmarkPluginNotEnabled": "This plugin can't work without bookmarks!"
-	},
-	"add": "Bookmarks {{- folder}} children"
+  "add": "Bookmarks {{- folder}} children",
+  "error": {
+    "bookmarkPluginNotEnabled": "This plugin can't work without bookmarks!"
+  },
+  "settings": {
+    "allow": "The plugin also lets you exclude or include files according to rules. In this way, all files that respect its path rules will be included or excluded when added to bookmarks.",
+    "delete": "Delete the rules",
+    "exclude": "Exclude only ...",
+    "include": "Include only ...",
+    "mode": {
+      "desc": "Exclude following the rules or include only following the rules",
+      "name": "Inclusion mode"
+    },
+    "newRules": "Add new rules",
+    "property": "It is also possible to use a <code>{{-property}}</code> in the frontmatter. This Boolean property can be used to define:",
+    "property_exclude": "Exclusion if defined on",
+    "property_include": "Inclusion if defined on",
+    "property_undef": "or if not defined.",
+    "regex": "Regular expressions are supported.",
+    "root": {
+      "desc": "Allow to add in a root for the created bookmarks.",
+      "name": "Root"
+    },
+    "strictness": "By default, the rules are not very strict: if the path contains text, then the file will be included or excluded."
+  }
 }

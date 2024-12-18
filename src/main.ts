@@ -2,10 +2,13 @@ import i18next from "i18next";
 import { Notice, Plugin, TFolder } from "obsidian";
 import type { BookmarksPluginInstance } from "obsidian-typings";
 import { resources, translationLanguage } from "./i18n";
+import { type BookmarksChildrenSettings, DEFAULT_SETTINGS } from "./interfaces";
+import { BookmarksChildrenSettingsTab } from "./settings";
 import { createFromPaths } from "./utils";
 
-export default class SyncBookmark extends Plugin {
+export default class BookmarksChildren extends Plugin {
 	bookmarkInstance: BookmarksPluginInstance | undefined = undefined;
+	settings: BookmarksChildrenSettings = DEFAULT_SETTINGS;
 
 	getItems(folder: TFolder) {
 		const filePaths: string[] = [];
@@ -23,7 +26,7 @@ export default class SyncBookmark extends Plugin {
 		if (!this.bookmarkInstance) return;
 		const root = folder.parent?.path === "/" ? undefined : folder.parent?.path;
 		const filePaths = this.getItems(folder);
-		const newBookmarks = createFromPaths(filePaths, root);
+		const newBookmarks = createFromPaths(filePaths, root, this);
 		for (const bookmark of newBookmarks) {
 			const existing = this.bookmarkInstance
 				.getBookmarks()
@@ -37,6 +40,8 @@ export default class SyncBookmark extends Plugin {
 
 	async onload() {
 		console.log(`[${this.manifest.name}] Loaded`);
+		await this.loadSettings();
+
 		//load i18next
 		await i18next.init({
 			lng: translationLanguage,
@@ -45,6 +50,7 @@ export default class SyncBookmark extends Plugin {
 			returnNull: false,
 			returnEmptyString: false,
 		});
+		this.addSettingTab(new BookmarksChildrenSettingsTab(this.app, this));
 
 		if (!this.app.internalPlugins.plugins.bookmarks.instance.plugin.enabled)
 			new Notice(i18next.t("error.bookmarkPluginNotEnabled"));
@@ -68,5 +74,13 @@ export default class SyncBookmark extends Plugin {
 
 	onunload() {
 		console.log(`[${this.manifest.name}] Unloaded`);
+	}
+
+	async loadSettings() {
+		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+	}
+
+	async saveSettings() {
+		await this.saveData(this.settings);
 	}
 }
