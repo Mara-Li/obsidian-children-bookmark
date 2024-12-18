@@ -29,14 +29,18 @@ function cleanOutDir(outdir) {
 
 dotenv.config({ path: [".env"] });
 
+function parseVault(value, _previous) {
+	if (!value) return false;
+	if (value && typeof value === "string") return path.resolve(value);
+	return process.env.vault;
+}
+
 const program = new Command();
 program
 	.option("-p, --production", "Production build")
-	.option("-v, --vault [vault]", "Use vault path")
-	.action((v) => {
-		if (!v) return false;
-		if (typeof v === "string") return path.resolve(v.replace(/\\/g, "/"));
-		return process.env.VAULT;
+	.option("-v, --vault [vault]", "Use vault path", parseVault)
+	.action((options) => {
+		options.vault = parseVault(options.vault);
 	})
 	.option("-o, --output-dir <path>", "Output path")
 	.option("-b, --beta", "Pre-release version")
@@ -57,6 +61,8 @@ const pluginID = manifest.id;
 const folderPlugin = opt.vault
 	? path.join(opt.vault, ".obsidian", "plugins", pluginID)
 	: undefined;
+
+console.log(folderPlugin);
 
 if (folderPlugin && !fs.existsSync(folderPlugin)) {
 	fs.mkdirSync(folderPlugin, { recursive: true });
